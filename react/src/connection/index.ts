@@ -8,6 +8,7 @@ import { WalletConnect } from '@web3-react/walletconnect';
 import { SupportedChainId } from 'constants/chains';
 import Fortmatic from 'fortmatic';
 
+import UNIPILOT_LOGO_URL from 'assets/svgs/dappzero.svg';
 import { RPC_URLS } from 'constants/networks';
 
 export enum ConnectionType {
@@ -16,7 +17,6 @@ export enum ConnectionType {
   WALLET_CONNECT = 'WALLET_CONNECT',
   FORTMATIC = 'FORTMATIC',
   NETWORK = 'NETWORK',
-  GNOSIS_SAFE = 'GNOSIS_SAFE',
 }
 
 export interface Connection {
@@ -81,6 +81,9 @@ const [web3CoinbaseWallet, web3CoinbaseWalletHooks] = initializeConnector<Coinba
       actions,
       options: {
         url: RPC_URLS[SupportedChainId.MAINNET],
+        appName: 'Unipilot',
+        appLogoUrl: UNIPILOT_LOGO_URL,
+        reloadOnDisconnect: false,
       },
       onError,
     })
@@ -90,3 +93,11 @@ export const coinbaseWalletConnection: Connection = {
   hooks: web3CoinbaseWalletHooks,
   type: ConnectionType.COINBASE_WALLET,
 };
+
+export const connections: Connection[] = [
+  injectedConnection,
+  walletConnectConnection,
+  coinbaseWalletConnection,
+  fortmaticConnection,
+  networkConnection,
+];

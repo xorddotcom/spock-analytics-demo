@@ -1,0 +1,33 @@
+.main {
+  width: 400px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.conenctors {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.conenctors div {
+  padding: 10px 0;
+  border: 1px solid #000;
+  margin: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bolder;
+}
