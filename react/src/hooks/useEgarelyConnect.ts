@@ -1,8 +1,9 @@
+import { useEffect } from 'react';
 import { Connector } from '@web3-react/types';
+
 import { networkConnection } from 'connection';
 import { getConnection } from 'connection/utils';
-import { useEffect } from 'react';
-// import { useAppSelector } from 'state/hooks'
+import { useAppSelector } from 'state/hooks';
 
 async function connect(connector: Connector) {
   try {
@@ -17,13 +18,13 @@ async function connect(connector: Connector) {
 }
 
 export default function useEagerlyConnect() {
-  //const selectedWallet = useAppSelector((state) => state.user.selectedWallet)
+  const selectedWallet = useAppSelector(state => state.user.selectedWallet);
 
   useEffect(() => {
     connect(networkConnection.connector);
 
-    // if (selectedWallet) {
-    //   connect(getConnection(selectedWallet).connector)
-    // } // The dependency list is empty so this is only run once on mount
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    if (selectedWallet) {
+      connect(getConnection(selectedWallet).connector);
+    } // The dependency list is empty so this is only run once on mount
+  }, []);
 }

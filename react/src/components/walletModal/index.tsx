@@ -1,9 +1,10 @@
-import { useState } from 'react';
 import Modal from 'react-modal';
 
-import { connections, Connection, walletConnectConnection } from 'connection';
-import { getConnectionName, getIsMetaMask } from 'connection/utils';
 import styles from './walletModal.module.css';
+import { connections, Connection, ConnectionType } from 'connection';
+import { getConnectionName, getIsMetaMask } from 'connection/utils';
+import { useAppDispatch } from 'state/hooks';
+import { updateSelectedWallet } from 'state/user/reducer';
 
 interface WalletModalProps {
   isOpen: boolean;
@@ -28,6 +29,7 @@ const WalletConnection = ({
   connection: Connection;
   onClose: () => void;
 }) => {
+  const dispatch = useAppDispatch();
   const isMetaMask = getIsMetaMask();
   const isActive = connection.hooks.useIsActive();
   const isActivating = connection.hooks.useIsActivating();
@@ -36,8 +38,11 @@ const WalletConnection = ({
     if (!isActive && !isActivating) {
       try {
         await connection.connector.activate();
+        dispatch(updateSelectedWallet({ wallet: connection.type }));
         onClose();
-      } catch (e) {}
+      } catch (error) {
+        console.debug('tryActiviate => ', error);
+      }
     }
   };
 
@@ -51,9 +56,6 @@ const WalletConnection = ({
 };
 
 const WalletModal: React.FC<WalletModalProps> = ({ isOpen, onClose }) => {
-  const { useIsActivating } = walletConnectConnection.hooks;
-  const isActivating = useIsActivating();
-
   return (
     <Modal isOpen={isOpen} contentLabel='Wallet Connection' style={customStyles}>
       <div className={styles.main}>
@@ -63,15 +65,14 @@ const WalletModal: React.FC<WalletModalProps> = ({ isOpen, onClose }) => {
             Close
           </span>
         </div>
-        {/* <div
-          onClick={isActivating ? undefined : () => walletConnectConnection.connector.activate(1)}
-        >
-          Test
-        </div> */}
         <div className={styles.conenctors}>
-          {connections.map(connection => (
-            <WalletConnection key={connection.type} connection={connection} onClose={onClose} />
-          ))}
+          {connections.map(connection =>
+            connection.type === ConnectionType.NETWORK ? (
+              <span key={connection.type}></span>
+            ) : (
+              <WalletConnection key={connection.type} connection={connection} onClose={onClose} />
+            )
+          )}
         </div>
       </div>
     </Modal>
