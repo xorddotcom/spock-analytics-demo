@@ -1,4 +1,4 @@
-# DAppzero Onboarding from Web
+# Spock Onboarding from Web
 
 1. Create account at [DAppzero](https://testing.dappzero.io/register) through your whitelisted email.
 2. After signup create applition for on-boarding.
