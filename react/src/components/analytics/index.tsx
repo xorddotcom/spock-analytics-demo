@@ -12,6 +12,7 @@ if (WEB3_ANALYTICS_KEY) {
   Web3Analytics.init({ appKey: 'test', testMode: true });
 }
 
+// use this hook at the root level for after providers
 export function useWeb3AnalyticsReporter() {
   const { pathname, search } = useLocation();
   const { provider } = useWeb3React();
