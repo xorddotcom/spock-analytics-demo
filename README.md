@@ -1,6 +1,6 @@
 # Spock Onboarding from Web
 
-1. Create account at [DAppzero](https://testing.dappzero.io/register) through your whitelisted email.
+1. Create account at [Spock](//https://thespock.xyz/register) through your whitelisted email.
 2. After signup create applition for on-boarding.
 
     <p>
@@ -16,4 +16,4 @@
 5. Integrate sdk on your DApp with the help of [analytics-web3-API](https://www.npmjs.com/package/analytics-web3#api) and you can also go through the [demo-code](https://github.com/xorddotcom/DAppzero-Analytics-Demo)
 
 ## Examples
- - [React](https://github.com/xorddotcom/dappzero-analytics-demo/tree/main/react)
+ - [React](https://github.com/xorddotcom/spock-analytics-demo/tree/main/react)
