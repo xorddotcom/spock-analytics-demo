@@ -8,7 +8,7 @@ import { WalletConnect } from '@web3-react/walletconnect';
 import { SupportedChainId } from 'constants/chains';
 import Fortmatic from 'fortmatic';
 
-import UNIPILOT_LOGO_URL from 'assets/svgs/dappzero.svg';
+import SPOCK_LOGO_URL from 'assets/svgs/spock.svg';
 import { RPC_URLS } from 'constants/networks';
 
 export enum ConnectionType {
@@ -81,8 +81,8 @@ const [web3CoinbaseWallet, web3CoinbaseWalletHooks] = initializeConnector<Coinba
       actions,
       options: {
         url: RPC_URLS[SupportedChainId.MAINNET],
-        appName: 'Unipilot',
-        appLogoUrl: UNIPILOT_LOGO_URL,
+        appName: 'Spock',
+        appLogoUrl: SPOCK_LOGO_URL,
         reloadOnDisconnect: false,
       },
       onError,

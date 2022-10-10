@@ -31,7 +31,7 @@ const Navbar = () => {
     <>
       <WalletConnect isOpen={openModal} onClose={() => setOpenModal(false)} />
       <nav className={styles.main}>
-        <h1>DAppzero</h1>
+        <h1>Spock</h1>
         <div className={styles.menu}>
           <NavLink path='/approve' title='Approve' activePath={pathname} />
           <NavLink path='/transfer' title='Transfer' activePath={pathname} />
