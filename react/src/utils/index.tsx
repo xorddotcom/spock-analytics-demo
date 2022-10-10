@@ -57,3 +57,8 @@ export function parseAmount(amount: string, decimals: number): BigNumber | undef
     return undefined;
   }
 }
+
+// return true if both are same address, otherwise returns false
+export const isSameAddress = (address0: string = '', address1: string = ''): boolean => {
+  return address0.toLowerCase() === address1.toLowerCase();
+};

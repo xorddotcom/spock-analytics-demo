@@ -6,7 +6,7 @@ import { useWeb3React } from '@web3-react/core';
 import { WEB3_ANALYTICS_KEY } from 'constants/env';
 
 if (WEB3_ANALYTICS_KEY) {
-  Web3Analytics.init({ appKey: WEB3_ANALYTICS_KEY });
+  Web3Analytics.init({ appKey: WEB3_ANALYTICS_KEY, debug: true, testENV: true });
 } else {
   //analytics on testMode, if want to see events on console pass debug true
   Web3Analytics.init({ appKey: 'test', testMode: true });
