@@ -1,7 +1,7 @@
 # Spock Onboarding from Web
 
 1. Create account at [Spock](//https://spockanalytics.xyz/) through your whitelisted email.
-2. After signup create applition for on-boarding.
+2. After signup create applition for on-boarding in spock
 
     <p>
     <img src="./assets/images/create-app.png" alt="create-app" width="300" height="300">
