@@ -1,4 +1,4 @@
-# Spock Onboarding from Web
+# Spock Analytics Onboarding from dApps
 
 1. Create account at [Spock](//https://spockanalytics.xyz/) through your whitelisted email.
 2. After signup create applition for on-boarding.
