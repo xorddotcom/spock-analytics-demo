@@ -34,16 +34,14 @@ a. Install the Spock Analytics published [analytics-web3](https://www.npmjs.com/
 b. Integrate sdk on your dApp with the help of [analytics-web3-API](https://www.npmjs.com/package/analytics-web3#api) and you can also go through the [demo-code](https://github.com/xorddotcom/DAppzero-Analytics-Demo)
 <br>
 
-Source : [Docs](https://spock-analytics.gitbook.io/spock-analytics-docs/adapter/adapter)
+Source : [Docs](https://spock-analytics.gitbook.io/spock-analytics-docs/sdk-integration/javascript-sdk)
 
 <br>
-
 <h3> 2. Code Adapter </h3>
-
 <br>
 Spock adapters are using two approaches for transforming raw on-chain data. One is the transformers which are used to track contribution (USD value moving inside the protocol) and extraction (USD value coming out from protocol), and the other one is TVL extractors that are responsible to calculate the asset in terms of USD locked in a protocol.
-<br>
 
+<br>
 Source : [Docs](https://spock-analytics.gitbook.io/spock-analytics-docs/adapter/adapter)
 
 
