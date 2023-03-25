@@ -5,8 +5,8 @@ Spock offers an extensive dataset for dApps, enabling product creators to identi
 # Get Started 
 To get started with Spock Analytics, follow these steps:
 
-a. Sign up on (https://spockanalytics.xyz/) through Web3 Wallets, Gmail, Twitter, or Magic link.
-b. Once you have signed up, create an application on either the Ethereum, Polygon, or BSC mainnet or testnet chain.
+1. Sign up on (https://spockanalytics.xyz/) through Web3 Wallets, Gmail, Twitter, or Magic link.
+2. Once you have signed up, create an application on either the Ethereum, Polygon, or BSC mainnet or testnet chain.
 
 # Integrations & Onboarding 
 To fully onboard on Spock Analytics, there are two steps that must be completed.
