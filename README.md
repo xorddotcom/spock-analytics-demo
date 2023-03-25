@@ -31,10 +31,11 @@ To fully onboard on Spock Analytics, there are two steps that must be completed.
 
 a. Install the Spock Analytics published [analytics-web3](https://www.npmjs.com/package/analytics-web3) package from npm.
 <br>
-
 b. Integrate sdk on your dApp with the help of [analytics-web3-API](https://www.npmjs.com/package/analytics-web3#api) and you can also go through the [demo-code](https://github.com/xorddotcom/DAppzero-Analytics-Demo)
 <br>
+
 Source : [Docs](https://spock-analytics.gitbook.io/spock-analytics-docs/adapter/adapter)
+
 <br>
 
 <h3> 2. Code Adapter </h3>
@@ -44,6 +45,7 @@ Spock adapters are using two approaches for transforming raw on-chain data. One 
 <br>
 
 Source : [Docs](https://spock-analytics.gitbook.io/spock-analytics-docs/adapter/adapter)
+
 
 ## Examples
  - [React](https://github.com/xorddotcom/spock-analytics-demo/tree/main/react)
