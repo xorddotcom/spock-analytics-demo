@@ -6,12 +6,16 @@ Spock offers an extensive dataset for dApps, enabling product creators to identi
 To get started with Spock Analytics, follow these steps:
 
 1. Sign up on [Spock Analytics](https://spockanalytics.xyz/) through Web3 Wallets, Gmail, Twitter, or Magic link.
+![image](https://user-images.githubusercontent.com/43118413/227744122-d642699d-7022-45a6-b09c-fd2d520393d5.png)
+
 2. Once you have signed up, create an application on either the Ethereum, Polygon, or BSC mainnet or testnet chain.
+![image](https://user-images.githubusercontent.com/43118413/227744172-46fc53da-8448-4e9b-a84f-c877e29a9666.png)
 
 # Integrations & Onboarding 
 To fully onboard on Spock Analytics, there are two steps that must be completed.
+![image](https://user-images.githubusercontent.com/43118413/227744202-07297a00-5390-43d5-b388-f98d0e386f59.png)
 
-<h3> 1. Javascript SDK Integration: </h3>
+<h3> 1. Javascript SDK Integration </h3>
 
 <p> You can use the Spock Javascript library to keep track of the off-chain data in your dApp. It's easy to install as an NPM package and will give you valuable insights into how your dApp is performing. 
  </p> 
