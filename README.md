@@ -1,6 +1,6 @@
-# Spock Onboarding from Web
+# Spock Analytics  Onboarding from Web
 
-1. Create account at [Spock](//https://spockanalytics.xyz/) through your whitelisted email.
+1. Create account at [Spock](//https://spockanalytics.xyz/) through Web3 Wallets,Gmail,Twitter or Magic link.
 2. After signup create applition for on-boarding.
 
     <p>
@@ -12,7 +12,7 @@
     <img src="./assets/images/configuration.png" alt="create-app">
     </p>
 
-4. Install the DAppzero published [analytics-web3](https://www.npmjs.com/package/analytics-web3) package from npm.
+4. Install the Spock Analytics published [analytics-web3](https://www.npmjs.com/package/analytics-web3) package from npm.
 5. Integrate sdk on your DApp with the help of [analytics-web3-API](https://www.npmjs.com/package/analytics-web3#api) and you can also go through the [demo-code](https://github.com/xorddotcom/DAppzero-Analytics-Demo)
 
 ## Examples
