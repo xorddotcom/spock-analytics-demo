@@ -5,7 +5,7 @@ Spock offers an extensive dataset for dApps, enabling product creators to identi
 # Get Started 
 To get started with Spock Analytics, follow these steps:
 
-1. Sign up on [https://spockanalytics.xyz/] through Web3 Wallets, Gmail, Twitter, or Magic link.
+1. Sign up on [Spock Analytics](https://spockanalytics.xyz/) through Web3 Wallets, Gmail, Twitter, or Magic link.
 2. Once you have signed up, create an application on either the Ethereum, Polygon, or BSC mainnet or testnet chain.
 
 # Integrations & Onboarding 
@@ -27,10 +27,10 @@ a. Once you created application you will get `appKey` from configuration page.
  <br>
 b. Install the Spock Analytics published [analytics-web3] [https://www.npmjs.com/package/analytics-web3] package from npm.
 <br> 
-c. Integrate sdk on your DApp with the help of [analytics-web3-API](https://www.npmjs.com/package/analytics-web3#api) and you can also go through the [demo-code](https://github.com/xorddotcom/DAppzero-Analytics-Demo)
+c. Integrate sdk on your DApp with the help of [analytics-web3-API] [https://www.npmjs.com/package/analytics-web3#api] and you can also go through the [demo-code](https://github.com/xorddotcom/DAppzero-Analytics-Demo)
 <br>
 
-Source :( https://spock-analytics.gitbook.io/spock-analytics-docs/adapter/adapter)
+Source : [Docs](https://spock-analytics.gitbook.io/spock-analytics-docs/adapter/adapter)
 <br>
 
 2.Code Adapter
@@ -38,7 +38,7 @@ Source :( https://spock-analytics.gitbook.io/spock-analytics-docs/adapter/adapte
 Spock adapters are using two approaches for transforming raw on-chain data. One is the transformers which are used to track contribution (USD value moving inside the protocol) and extraction (USD value coming out from protocol), and the other one is TVL extractors that are responsible to calculate the asset in terms of USD locked in a protocol.
 <br>
 
-Source : (https://spock-analytics.gitbook.io/spock-analytics-docs/adapter/adapter)
+Source : [Docs](https://spock-analytics.gitbook.io/spock-analytics-docs/adapter/adapter)
 
 ## Examples
  - [React](https://github.com/xorddotcom/spock-analytics-demo/tree/main/react)
