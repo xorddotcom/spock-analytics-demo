@@ -11,8 +11,9 @@ To get started with Spock Analytics, follow these steps:
 # Integrations & Onboarding 
 To fully onboard on Spock Analytics, there are two steps that must be completed.
 
-1.Javascript SDK Integration 
-You can use the Spock Javascript library to keep track of the off-chain data in your dApp. It's easy to install as an NPM package and will give you valuable insights into how your dApp is performing.
+1.Javascript SDK Integration:
+<p> You can use the Spock Javascript library to keep track of the off-chain data in your dApp. It's easy to install as an NPM package and will give you valuable insights into how your dApp is performing. 
+ </p>
  <p>
     <img src="./assets/images/create-app.png" alt="create-app" width="300" height="300">
     </p>
