@@ -38,10 +38,11 @@ Source : [Docs](https://spock-analytics.gitbook.io/spock-analytics-docs/sdk-inte
 
 <br>
 <h3> 2. Code Adapter </h3>
-<br>
+<p>
 Spock adapters are using two approaches for transforming raw on-chain data. One is the transformers which are used to track contribution (USD value moving inside the protocol) and extraction (USD value coming out from protocol), and the other one is TVL extractors that are responsible to calculate the asset in terms of USD locked in a protocol.
-
+</p>
 <br>
+
 Source : [Docs](https://spock-analytics.gitbook.io/spock-analytics-docs/adapter/adapter)
 
 
