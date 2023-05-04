@@ -1,20 +1,17 @@
 import { useCallback, useMemo } from 'react';
-import Web3Analytics from 'analytics-web3';
 import { BigNumber } from '@ethersproject/bignumber';
 import _ from 'lodash';
 
 import useTokenMetadata from 'hooks/useTokenMetadata';
 import useTransfer from 'hooks/useTransfer';
 import useObjectState from 'hooks/useObjectState';
-import { isAddress, parseAmount, isSameAddress } from 'utils';
+import { isAddress, parseAmount } from 'utils';
 
 const initialTransferState = {
   tokenAddress: '',
   receiverAddress: '',
   amount: '',
 };
-
-const ADDRESS_89 = '0xa0e9e6b79a3e1ab87feb209567ef3e0373210a89';
 
 type TransferState = typeof initialTransferState;
 
@@ -63,12 +60,6 @@ export default function useTokenTransfer() {
   const handleTransfer = useCallback(() => {
     if (!isDisabled && parsedAmount) {
       transfer(receiverAddress, parsedAmount, () => {
-        //just for example, although in production pass only USD value to get meaningful analytics
-        if (isSameAddress(receiverAddress, ADDRESS_89)) {
-          Web3Analytics.valueExtraction('Removal', parsedAmount.toNumber());
-        } else {
-          Web3Analytics.valueContribution('Transfer', parsedAmount.toNumber());
-        }
         resetTransferState();
       });
     }

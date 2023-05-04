@@ -27,3 +27,27 @@
 .active {
   font-weight: bolder;
 }
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.tracking {
+  font-size: 18px;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  margin-right: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.start {
+  background-color: #fff;
+  color: #000;
+}
+
+.stop {
+  background-color: #000;
+  color: #fff;
+}

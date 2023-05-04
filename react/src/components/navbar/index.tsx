@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import Web3Analytics from 'analytics-web3';
 import { useWeb3React } from '@web3-react/core';
 
 import WalletConnect from 'components/walletModal';
@@ -24,8 +25,20 @@ const NavLink = ({
 
 const Navbar = () => {
   const [openModal, setOpenModal] = useState<boolean>(false);
+  const [allowTracking, setAllowTracking] = useState<boolean>(!Web3Analytics.hasOptedOutTracking());
   const { account } = useWeb3React();
   const { pathname } = useLocation();
+
+  const toggleTracking = () => {
+    const optOut = Web3Analytics.hasOptedOutTracking();
+    if (optOut) {
+      Web3Analytics.optInTracking();
+      setAllowTracking(true);
+    } else {
+      Web3Analytics.optOutTracking();
+      setAllowTracking(false);
+    }
+  };
 
   return (
     <>
@@ -36,8 +49,16 @@ const Navbar = () => {
           <NavLink path='/approve' title='Approve' activePath={pathname} />
           <NavLink path='/transfer' title='Transfer' activePath={pathname} />
         </div>
-        <div className={styles.connect} onClick={() => setOpenModal(true)}>
-          {account ? shortenAddress(account) : 'Connect'}
+        <div className={styles.controls}>
+          <div
+            className={[styles.tracking, allowTracking ? styles.start : styles.stop].join(' ')}
+            onClick={toggleTracking}
+          >
+            Stop tracking
+          </div>
+          <div className={styles.connect} onClick={() => setOpenModal(true)}>
+            {account ? shortenAddress(account) : 'Connect'}
+          </div>
         </div>
       </nav>
     </>
