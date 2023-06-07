@@ -2,7 +2,8 @@
 Spock offers an extensive dataset for dApps, enabling product creators to identify and analyze critical pain points across multiple data sets. These data sets include both off-chain and real-time on-chain metrics, providing product creators with a complete picture of the product experience on both sides of the dApps.
 <br>
 
-![image](https://user-images.githubusercontent.com/43118413/227742476-cc9f425e-2880-414d-bca4-d312ca5cea1b.png)
+![image](https://github.com/xorddotcom/spock-analytics-demo/assets/43118413/f66362f6-1351-4cea-8258-b07e6f2b45f4)
+
 
 # Get Started 
 To get started with Spock Analytics, follow these steps:
@@ -21,9 +22,17 @@ To get started with Spock Analytics, follow these steps:
 To fully onboard on Spock Analytics, there are two steps that must be completed.
 <br>
 
-![image](https://user-images.githubusercontent.com/43118413/227744458-0e2f5bdc-9738-4c12-8fb9-ac140adbfe63.png)
+![image](https://github.com/xorddotcom/spock-analytics-demo/assets/43118413/b1593ec6-01d3-49e5-a3a4-4a3b36edf5d9)
 
-<h3> 1. Javascript SDK Integration </h3>
+<h3> 1. Smart Contract Integration </h3>
+
+<p> Spock provides users with a streamlined and expeditious integration experience. To begin, all you need to do is provide the smart contract details of your dApp. In a matter of hours, Spock will diligently extract, synchronize, and furnish your on-chain data, granting you access to the formidable Understand section. 
+ </p>
+ <br>
+
+Source : [Docs](https://spock-analytics.gitbook.io/spock-analytics-docs/smart-contract/contract-form)
+
+<h3> 2. Javascript SDK Integration </h3>
 
 <p> You can use the Spock Javascript library to keep track of the off-chain data in your dApp. It's easy to install as an NPM package and will give you valuable insights into how your dApp is performing. 
  </p>
@@ -37,7 +46,7 @@ b. Integrate sdk on your dApp with the help of [analytics-web3-API](https://www.
 Source : [Docs](https://spock-analytics.gitbook.io/spock-analytics-docs/sdk-integration/javascript-sdk)
 
 <br>
-<h3> 2. Code Adapter </h3>
+<h3> 3. Code Adapter </h3>
 <p>
 Spock adapters are using two approaches for transforming raw on-chain data. One is the transformers which are used to track contribution (USD value moving inside the protocol) and extraction (USD value coming out from protocol), and the other one is TVL extractors that are responsible to calculate the asset in terms of USD locked in a protocol.
 </p>
