@@ -2,7 +2,7 @@
 Spock offers an extensive dataset for dApps, enabling product creators to identify and analyze critical pain points across multiple data sets. These data sets include both off-chain and real-time on-chain metrics, providing product creators with a complete picture of the product experience on both sides of the dApps.
 <br>
 
-![image](https://github.com/xorddotcom/spock-analytics-demo/assets/43118413/f66362f6-1351-4cea-8258-b07e6f2b45f4)
+![image](https://github.com/xorddotcom/spock-analytics-demo/assets/43118413/e759f38a-dedd-478f-b7cb-128a42903d62)
 
 
 # Get Started 
