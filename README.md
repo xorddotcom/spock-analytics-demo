@@ -8,7 +8,7 @@ Spock Analytics offers an extensive dataset for dApps, enabling dApp creators to
 # Get Started 
 To get started with Spock Analytics, follow these steps:
 <br>
-1. Sign up on [Spock Analytics](https://spockanalytics.xyz/) through Web3 Wallets, Gmail, Twitter, or Magic link.
+1. Sign up on [Spock Analytics](https://app.spockanalytics.xyz/) through a web3 wallet, Google, or a magic link.
 <br> 
 
 ![image](https://user-images.githubusercontent.com/43118413/227744122-d642699d-7022-45a6-b09c-fd2d520393d5.png)
