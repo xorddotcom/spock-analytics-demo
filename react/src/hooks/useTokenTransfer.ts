@@ -1,5 +1,4 @@
 import { useCallback, useMemo } from 'react';
-import Web3Analytics from 'analytics-web3';
 import { BigNumber } from '@ethersproject/bignumber';
 import _ from 'lodash';
 
@@ -61,8 +60,6 @@ export default function useTokenTransfer() {
   const handleTransfer = useCallback(() => {
     if (!isDisabled && parsedAmount) {
       transfer(receiverAddress, parsedAmount, () => {
-        //just for example, although in production pass only USD value to get meaningful analytics
-        Web3Analytics.valueContribution('Transfer', parsedAmount.toNumber());
         resetTransferState();
       });
     }

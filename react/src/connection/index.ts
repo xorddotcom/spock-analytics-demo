@@ -30,7 +30,7 @@ function onError(error: Error) {
 }
 
 const [web3Network, web3NetworkHooks] = initializeConnector<Network>(
-  actions => new Network({ actions, urlMap: RPC_URLS, defaultChainId: 4 })
+  actions => new Network({ actions, urlMap: RPC_URLS, defaultChainId: 5 })
 );
 export const networkConnection: Connection = {
   connector: web3Network,
@@ -80,7 +80,7 @@ const [web3CoinbaseWallet, web3CoinbaseWalletHooks] = initializeConnector<Coinba
     new CoinbaseWallet({
       actions,
       options: {
-        url: RPC_URLS[SupportedChainId.MAINNET],
+        url: RPC_URLS[SupportedChainId.ETHEREUM],
         appName: 'Spock',
         appLogoUrl: SPOCK_LOGO_URL,
         reloadOnDisconnect: false,
