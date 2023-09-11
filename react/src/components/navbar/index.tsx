@@ -44,10 +44,15 @@ const Navbar = () => {
     <>
       <WalletConnect isOpen={openModal} onClose={() => setOpenModal(false)} />
       <nav className={styles.main}>
-        <h1>Spock</h1>
+        <div className={styles.heading}>
+          <h1>Spock</h1>
+        </div>
         <div className={styles.menu}>
           <NavLink path='/approve' title='Approve' activePath={pathname} />
           <NavLink path='/transfer' title='Transfer' activePath={pathname} />
+          <a href='https://etherscan.io/' target='_blank'>
+            Etherscan
+          </a>
         </div>
         <div className={styles.controls}>
           <div

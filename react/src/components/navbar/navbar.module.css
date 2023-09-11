@@ -1,8 +1,15 @@
 .main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px 20px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.heading {
+  position: absolute;
+  left: 10px;
 }
 
 .connect {
@@ -15,6 +22,10 @@
 
 .menu {
   font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu a {
@@ -22,6 +33,10 @@
   text-decoration: underline;
   cursor: pointer;
   color: #000;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 }
 
 .active {
@@ -29,8 +44,14 @@
 }
 
 .controls {
+  position: absolute;
+  right: 10px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 }
 
 .tracking {
