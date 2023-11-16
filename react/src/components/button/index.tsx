@@ -9,14 +9,15 @@ interface ButtonProps {
   disabled?: boolean;
   loading?: boolean;
   onClick?: () => void;
+  normal?: boolean;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, disabled, loading, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ children, disabled, loading, onClick, normal }) => {
   const [openModal, setOpenModal] = useState<boolean>(false);
   const { account } = useWeb3React();
 
   const handleClick = () => {
-    if (!account) {
+    if (!account && !normal) {
       setOpenModal(true);
     } else if (!loading && !disabled) {
       onClick && onClick();
@@ -27,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({ children, disabled, loading, onClick })
     <>
       <WalletConnect isOpen={openModal} onClose={() => setOpenModal(false)} />
       <button className={styles.button} onClick={handleClick} disabled={account ? disabled : false}>
-        {account ? (loading ? 'Loading' : children) : 'Connect'}
+        {account || normal ? (loading ? 'Loading' : children) : 'Connect'}
       </button>
     </>
   );

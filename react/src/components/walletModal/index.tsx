@@ -1,6 +1,6 @@
-import Modal from 'react-modal';
-
 import styles from './walletModal.module.css';
+
+import Modal from 'components/modal';
 import { connections, Connection, ConnectionType } from 'connection';
 import { getConnectionName, getIsMetaMask } from 'connection/utils';
 import { useAppDispatch } from 'state/hooks';
@@ -10,17 +10,6 @@ interface WalletModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
 
 const WalletConnection = ({
   connection,
@@ -57,23 +46,15 @@ const WalletConnection = ({
 
 const WalletModal: React.FC<WalletModalProps> = ({ isOpen, onClose }) => {
   return (
-    <Modal isOpen={isOpen} contentLabel='Wallet Connection' style={customStyles}>
-      <div className={styles.main}>
-        <div className={styles.header}>
-          <span>Wallet Connection</span>
-          <span className={styles.close} onClick={onClose}>
-            Close
-          </span>
-        </div>
-        <div className={styles.conenctors}>
-          {connections.map(connection =>
-            connection.type === ConnectionType.NETWORK ? (
-              <span key={connection.type}></span>
-            ) : (
-              <WalletConnection key={connection.type} connection={connection} onClose={onClose} />
-            )
-          )}
-        </div>
+    <Modal isOpen={isOpen} label='Wallet Connection' onClose={onClose}>
+      <div className={styles.conenctors}>
+        {connections.map(connection =>
+          connection.type === ConnectionType.NETWORK ? (
+            <span key={connection.type}></span>
+          ) : (
+            <WalletConnection key={connection.type} connection={connection} onClose={onClose} />
+          )
+        )}
       </div>
     </Modal>
   );

@@ -1,0 +1,14 @@
+.main {
+  width: 400px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close {
+  cursor: pointer;
+  text-decoration: underline;
+}

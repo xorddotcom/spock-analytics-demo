@@ -5,7 +5,7 @@ export default function useObjectState<T extends object>(initialState: T) {
   const [objectState, setObjectState] = useState<T>(initialState);
 
   const prevStateSetter = useCallback(
-    (field: keyof T, value: string) => {
+    (field: keyof T, value: any) => {
       setObjectState(prevState => ({ ...prevState, [field]: value }));
     },
     [setObjectState]

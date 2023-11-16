@@ -4,6 +4,7 @@ import Web3Analytics from 'analytics-web3';
 import { useWeb3React } from '@web3-react/core';
 
 import WalletConnect from 'components/walletModal';
+import SettingsModal from 'components/settingsModal';
 import { shortenAddress } from 'utils';
 import styles from './navbar.module.css';
 
@@ -25,6 +26,7 @@ const NavLink = ({
 
 const Navbar = () => {
   const [openModal, setOpenModal] = useState<boolean>(false);
+  const [openSettingsModal, setOpenSettingsModal] = useState<boolean>(false);
   const [allowTracking, setAllowTracking] = useState<boolean>(!Web3Analytics.hasOptedOutTracking());
   const { account } = useWeb3React();
   const { pathname } = useLocation();
@@ -43,6 +45,7 @@ const Navbar = () => {
   return (
     <>
       <WalletConnect isOpen={openModal} onClose={() => setOpenModal(false)} />
+      <SettingsModal isOpen={openSettingsModal} onClose={() => setOpenSettingsModal(false)} />
       <nav className={styles.main}>
         <div className={styles.heading}>
           <h1>Spock</h1>
@@ -55,6 +58,9 @@ const Navbar = () => {
           </a>
         </div>
         <div className={styles.controls}>
+          <div className={styles.tracking} onClick={() => setOpenSettingsModal(true)}>
+            Settings
+          </div>
           <div
             className={[styles.tracking, allowTracking ? styles.start : styles.stop].join(' ')}
             onClick={toggleTracking}

@@ -3249,10 +3249,10 @@ alphanum-sort@^1.0.0:
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha512-0FcBfdcmaumGPQ0qPn7Q5qTgz/ooXgIyp1rf8ik5bGX8mpE2YHjC0P/eyQvxu1GURYQgq9ozf2mteQ5ZD9YiyQ==
 
-analytics-web3@^1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/analytics-web3/-/analytics-web3-1.3.2.tgz#3e8e84c5ce784bbe13b4e8bf989d3848360e1517"
-  integrity sha512-IN8TAXYKaqBO3KABjASLJRwmqnstoCGKPYLYbUAs/vgTraSJbRv9yHx+sAVgmqvwCLBK+YoVn1xzQZvdJZMIWQ==
+analytics-web3@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/analytics-web3/-/analytics-web3-1.5.0.tgz#a8f751eaa71255f82e267d165a119972c90e7971"
+  integrity sha512-1tcX6WWbIvSr33prSAP9M09yh/Z9d+fHM1zsJ0yHlBUgQIBcsZckUk7R8BSzPtocZELPyOdBYEfA3UJSeDHEjg==
 
 ansi-colors@^3.0.0:
   version "3.2.4"

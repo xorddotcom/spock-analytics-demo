@@ -3,18 +3,25 @@ import Web3Analytics from 'analytics-web3';
 import { useLocation } from 'react-router-dom';
 import { useWeb3React } from '@web3-react/core';
 
-import { WEB3_ANALYTICS_KEY } from 'constants/env';
+import { storedSettings } from 'constants/analytics';
 
-if (WEB3_ANALYTICS_KEY) {
-  Web3Analytics.init({
-    appKey: WEB3_ANALYTICS_KEY,
-    // debug: true,
-    // inactivityTimeout: 5,
-  });
-} else {
-  //analytics on testMode, if want to see events on console pass debug true
-  Web3Analytics.init({ appKey: 'test', testMode: true });
-}
+// ********************RECOMMENDED INTEGRATION*******************************
+// import { WEB3_ANALYTICS_KEY } from 'constants/env';
+
+// Web3Analytics.init({
+//   appKey: WEB3_ANALYTICS_KEY,
+//   dataPoints: ['demographics', 'engage', 'web2', 'web3'],
+// });
+
+// ********************SPECIFIC TO THIS DEMO APP*******************************
+Web3Analytics.init({
+  appKey: storedSettings.appkey,
+  dataPoints: storedSettings.datapoints as any,
+  ...(storedSettings.configuration.reduce<Record<string, boolean>>((accum, config) => {
+    accum[config] = true;
+    return accum;
+  }, {}) as any),
+});
 
 // use this hook at the root level for after providers
 export function useWeb3AnalyticsReporter() {
